@@ -1,0 +1,340 @@
+  @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&family=Roboto:wght@400;700&display=swap');
+  
+
+  /* reset  */
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+  }
+
+  :root{
+     --primary-text-color:#183b56;
+     --secondary-text-color:#577592;
+     --accent-color:#2294ed;
+     --accent-color-dark:#1d69a3;
+     --padding-inline-section:20px;
+     /* --section-border:2px solid red; */
+     /* --section-container-border:2px solid #0096FF; */
+}
+
+body{
+  font-family: 'Poppins', 'sans-serif';
+  color: var(--primary-text-color);
+}
+h1{
+  font-size: 3rem;
+}
+h2{
+  font-size: 2rem;
+}
+h3{
+  font-size: 1.5rem;
+}
+
+p{
+  font-family: 'Roboto',sans-serif;
+  font-size: 1.25rem;
+  color: var(--secondary-text-color);
+  line-height: 1.8rem; 
+}
+
+a{
+  text-decoration: none;
+  display: inline-block;
+}
+
+/*----utility classes Utilization---- */
+.small-bold-text{
+  font-size: 1rem;
+  font-weight: 500;
+}
+.container{
+  max-width: 1180px;
+  margin-inline: auto;
+  padding-inline: var(--padding-inline-section); /* left and right spacing of 20px as padding  */
+  overflow: hidden; /* for Resonsive */
+}
+.flex{
+  display: flex;
+  align-items: center;
+}
+.hover-link{
+  color: var(--accent-color-dark);  /*this class is made for a tag bcz we know by default it is blue so color them and for hover 👇 one more class see next 3rd line*/
+  transition: 0.2 ease-out;
+}
+.hover-link:hover{
+  color: var(--accent-color);
+
+}
+.primary-button{
+  background-color: var(--accent-color);
+  border-radius: 6px;
+  font-weight: 700px;
+  color: white !important;
+  padding: 12px 24px;
+  transition: all 0.2 ease-out;
+  text-align: center;
+}
+.primary-button:hover{
+  background-color: var(--accent-color-dark);
+}
+.secondary-button {
+  border: 0.5px solid var(--secondary-text-color);
+  color: var(--primary-text-color) !important;
+  border-radius: 6px;
+  font-weight: 700px;
+  padding: 12px 24px;
+  transition: all 0.2 ease-out;
+}
+.secondary-button:hover{
+  border: 0.5px solid var(--accent-color);
+  color: var(--accent-color) !important;
+
+}
+.arrow-icon-color{
+  color: var(--accent-color) ;
+}
+/*---- End utility classes---- */
+
+
+/* =======================top banner======================= */
+.top-banner {
+  background-color:#4FB3D4 ;
+  background-image: url(../media/asset\ 30.png); /* by default backgroun-image's background-size: cover; so it seems zoomed bcz img large and its div small from itself. */
+  background-size: 300px; /* it means only height: ; width original*/
+}
+
+.banner-text {
+color: white;
+padding: 15px 30px;
+text-align: center;
+}
+/* ===END top banner=== */
+
+/* ========================== nav bar ========================== */
+.main-nav {
+  /* display: flex;
+  align-items: center; */ /*hide bcz of utility class */
+  justify-content: space-between;
+  padding-top: 15px;
+  /* border: 2px solid red; */
+  position: relative;
+}
+ul{
+  list-style: none;
+}
+.company-logo img{
+  width: 200px;
+}
+div.nav-links{
+  flex-basis: 730px;
+}
+.nav-links ul {
+  justify-content: end; /* so that it keep or stay in right side end  */
+  gap: 40px;
+
+}
+.nav-toggle{
+  display: none;
+}
+/* == end nav bar == */
+
+/* =========================  header hero section =========================  */
+header{
+   padding: 50px var(--padding-inline-section) 0;       /*  means padding: 50px 20px 20px 0px ; */
+   border: var(--section-border);
+}
+.header-section-container{
+  justify-content: center;
+  gap: 50px;
+  border: var(--section-container-border);
+}
+.header-left{
+  width: 40vw; /* 40vw = 590px it is width of div equla width: 590px; 1vw=14.4px  */
+  border: var(--section-border);
+
+}
+.header-left a{
+  margin-top: 20px;
+}
+.header-right{
+  border: var(--section-border);
+
+}
+.header-right img{
+   /* width: 590px;   it is width of img not its div */
+   width: 100%;
+}
+
+/* =========================  companies-section =========================  */
+.companies-header{
+text-align: center;
+margin-block: 30px;   /* each element margin buttom and up */ /*it is shorthand of margin-top: ; and margin-bottom: ;*/
+color: var(--primary-text-color);
+}
+.companies-logo{
+ justify-content: space-between; 
+ flex-wrap: wrap;
+
+}
+.companies-logo img{
+ height: 46px;
+}
+.companies-section{
+  border: var(--section-border);
+
+}
+.companies-container{
+  border: var(--section-container-border);
+}
+/* =========================  features-section =========================  */
+.features-header{
+  text-align: center;
+}
+.features-header h2{
+  margin-bottom: 15px;
+}
+section.features-section{
+  padding: 80px var(--padding-inline-section) 0px; /*  means padding: 80px 20px 0px;  in three value case mid represents for left and right */
+  background-image: url(../media/asset\ 32.svg);
+  background-repeat: no-repeat;
+  background-position: center;
+  border: var(--section-border);
+
+}
+.features-container{
+  border: var(--section-container-border);
+}
+.features-card{
+  flex-direction: column;
+  gap: 15px;
+  width: 30%;
+  text-align: center;  /* so that or for paragraph  */
+  /* border: 2px solid rebeccapurple; */
+}
+.features-card img{
+  width: 60px;
+}
+.features-area{
+  flex-wrap: wrap;   /* so that width 30% kaam kre  */
+  justify-content: space-between;
+  gap: 40px;
+  margin-top: 30px;
+}
+
+
+/* =========================  big-features-section =========================  */
+.big-features-section{
+  padding: 30px var(--padding-inline-section) 0px;
+  border: var(--section-border);
+
+}
+.big-features-container{
+  gap: 30px; 
+  border: var(--section-container-border);
+}
+
+.big-features-img-left-section img{
+  width: 100%;                     /* how img width is set. i mean how img size is reduced??  ?????????????????????????????????????????????????????????????????????????? */
+}
+
+/* =========================  examples section =========================  */
+.examples-section{
+  padding: 30px var(--padding-inline-section) 0px;
+
+}
+.examples-section-conatiner{
+  border: var(--section-container-border);
+
+}
+.examples-header{
+  text-align: center;
+}
+.examples-header h2{
+margin-bottom: 15px;
+}
+.examples-area{
+  justify-content: space-between; /* margin on x-axis right side of element */
+  margin-block: 30px; /* each element margin buttom and up */ /*it is shorthand of margin-top: ; and margin-bottom: ;*/
+  flex-wrap: wrap;
+}
+.examples-card{
+  width: 23%;   /* 25% not BCZ we want to add space right side of elements */
+  height:300px;
+  background: black; /* why it is defined if below woundn't work then it will be work for backup  */
+  background:linear-gradient(rgb(0,0,0,0.1), rgb(0,0,0,0.8) ), url(../media/asset\ 34.jpeg); 
+  background-size: cover;
+  position: relative;
+  transition: 0.2s ease-out; /* it provide smoothness in changes betwwen like in it showdow */
+}
+.examples-card-text{
+position: absolute;
+bottom: 20px;
+left: 20px;
+right: 20px;
+color: white;
+line-height: 29px;
+}
+.examples-card:nth-child(2){
+  background:linear-gradient(rgb(0,0,0,0.1), rgb(0,0,0,0.8) ), url(../media/asset\ 35.jpeg); 
+  background-size: cover;
+}
+.examples-card:nth-child(3){
+  background:linear-gradient(rgb(0,0,0,0.1), rgb(0,0,0,0.8) ), url(../media/asset\ 36.jpeg); 
+  background-size: cover;
+}
+.examples-card:nth-child(4){
+  background:linear-gradient(rgb(0,0,0,0.1), rgb(0,0,0,0.8) ), url(../media/asset\ 37.jpeg); 
+  background-size: cover;
+}
+.examples-card:hover{
+  box-shadow: 0 0 15px #797878;
+}
+
+/* ========================= cta-try-our-panel-section =========================  */
+.try-panel-section{
+ background-color: #183b56;
+ padding: 100px var(--padding-inline-section) 80px;
+
+}
+.try-panel-section-container{
+  flex-direction: column;
+  gap: 30px;
+  color: white;
+  /* border: var(--section-container-border); */
+}
+.try-panel-section-container p{
+  color: rgba(255, 255, 255, 0.777);
+}
+
+/* ========================= footer section =========================  */
+.company-logo-footer img{
+  width: 200px;
+}
+footer{
+  padding: 50px var(--padding-inline-section) 50px;
+  /* height: 220px; */
+  background-color: #EBF2FA;
+}
+.footer-menu{
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 10px;
+}
+.footer-container{
+  /* display: flex;  it is alredy mention as flex class Yes U can define also here just to Readability and undertanding */
+  justify-content: space-between;
+  align-items: flex-start; /* bcz flex class mei align-items: center; ho rakh h */
+}
+/* ========================= Sub-footer section =========================  */
+.sub-footer-container{
+  justify-content: center;
+  gap: 20px;
+}
+.sub-footer{
+  background-color:#B9CDE4;
+  padding-block: 30px;
+  
+} 
